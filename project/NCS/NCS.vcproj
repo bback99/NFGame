@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.10"
+	Name="NCS"
+	ProjectGUID="{60CE6D1A-12EA-405C-BEC3-641212AC11B2}"
+	RootNamespace="NCS"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="../../include;../../NFLibrary"
+				PreprocessorDefinitions="WIN32;_UNICODE;UNICODE;_DEBUG;_CONSOLE;_USING_GDBGW_;_NCSNLS"
+				MinimalRebuild="FALSE"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				BufferSecurityCheck="TRUE"
+				TreatWChar_tAsBuiltInType="TRUE"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="3"
+				PrecompiledHeaderFile=".\Debug/NCS.pch"
+				AssemblerListingLocation=".\Debug/"
+				ObjectFile=".\Debug/"
+				ProgramDataBaseFileName=".\Debug/"
+				BrowseInformation="1"
+				WarningLevel="4"
+				WarnAsError="FALSE"
+				Detect64BitPortabilityProblems="FALSE"
+				DebugInformationFormat="4"
+				CompileAs="0"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalDependencies="../../lib/NFAchvD.lib"
+				OutputFile="../../bin/NCSD.exe"
+				LinkIncremental="1"
+				SuppressStartupBanner="TRUE"
+				AdditionalLibraryDirectories="../../lib"
+				GenerateDebugInformation="TRUE"
+				ProgramDatabaseFile="../../bin/NCSD.pdb"
+				GenerateMapFile="FALSE"
+				MapFileName=".\Debug/NCSD.map"
+				SubSystem="1"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"
+				CommandLine="IF NOT EXIST &quot;../../../trunk_bin&quot; MD &quot;../../../trunk_bin&quot;
+XCOPY &quot;../../bin\NCSD.exe&quot; &quot;../../../trunk_bin\&quot; /Y
+XCOPY &quot;../../bin\NCSD.pdb&quot; &quot;../../../trunk_bin\&quot; /Y
+"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="1"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalIncludeDirectories="../include"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_USING_GDBGW_;"
+				RuntimeLibrary="0"
+				TreatWChar_tAsBuiltInType="TRUE"
+				RuntimeTypeInfo="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Release/NCS.pch"
+				AssemblerListingLocation=".\Release/"
+				ObjectFile=".\Release/"
+				ProgramDataBaseFileName=".\Release/"
+				WarningLevel="4"
+				WarnAsError="TRUE"
+				Detect64BitPortabilityProblems="FALSE"
+				DebugInformationFormat="3"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				OutputFile="$(OutDir)/NCS.exe"
+				LinkIncremental="1"
+				GenerateDebugInformation="TRUE"
+				SubSystem="1"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"/>
+			<Tool
+				Name="VCWebDeploymentTool"/>
+			<Tool
+				Name="VCManagedWrapperGeneratorTool"/>
+			<Tool
+				Name="VCAuxiliaryManagedWrapperGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}">
+			<File
+				RelativePath=".\GameStatTable.cpp">
+			</File>
+			<File
+				RelativePath=".\Listener.cpp">
+			</File>
+			<File
+				RelativePath=".\LRBHandler.cpp">
+			</File>
+			<File
+				RelativePath=".\LRBHandlerEx.cpp">
+			</File>
+			<File
+				RelativePath=".\Manager.cpp">
+			</File>
+			<File
+				RelativePath=".\NCS.cpp">
+			</File>
+			<File
+				RelativePath=".\stdafx.cpp">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"/>
+				</FileConfiguration>
+			</File>
+			<Filter
+				Name="Header Files"
+				Filter="h;hpp;hxx;hm;inl;inc;xsd"
+				UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}">
+				<File
+					RelativePath=".\GameStatTable.h">
+				</File>
+				<File
+					RelativePath=".\Listener.h">
+				</File>
+				<File
+					RelativePath=".\LRBHandler.h">
+				</File>
+				<File
+					RelativePath=".\Manager.h">
+				</File>
+				<File
+					RelativePath=".\stdafx.h">
+				</File>
+				<File
+					RelativePath=".\User.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+		</Filter>
+		<Filter
+			Name="ADL Files"
+			Filter="">
+			<File
+				RelativePath="..\..\include\Adl\AdminDB.adl">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies=""
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies="$(InputDir)Msg$(InputName).h"
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\include\Adl\AdminStruct.ADL">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies=""
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies="$(InputDir)Msg$(InputName).h"
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\include\Adl\BLRBCommon.adl">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies=""
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies="$(InputDir)Msg$(InputName).h"
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\include\Adl\ChannelCommon.adl">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies=""
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies="$(InputDir)Msg$(InputName).h"
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\include\Adl\CHSGLSCli.adl">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\include\Adl\CommonStruct.adl">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies=""
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies="$(InputDir)Msg$(InputName).h"
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\include\Adl\GBSCLI.adl">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies=""
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies="$(InputDir)Msg$(InputName).h"
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\include\Adl\NSAP.adl">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies=""
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+						AdditionalDependencies="$(InputDir)Msg$(InputName).h"
+						Outputs="$(InputDir)Msg$(InputName).h"/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\PMSConnObject.cpp">
+			</File>
+			<Filter
+				Name="NF"
+				Filter="">
+				<File
+					RelativePath="..\..\include\Nf\Adl\Chsncs.adl">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\include\Nf\Adl\NASCLI.adl">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\include\Nf\Adl\NCSCli.adl">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\include\Nf\Adl\NCSNGS.adl">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\include\Nf\Adl\NFCommonStruct.adl">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath="..\..\include\Nf\Adl\NLSCLI.adl">
+					<FileConfiguration
+						Name="Debug|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release|Win32">
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="$(ProjectDir)..\..\bin\XADL.EXE /C OLDBER /O $(InputDir) $(InputPath)
+"
+							Outputs="$(InputDir)Msg$(InputName).h"/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="ACHV"
+			Filter="">
+			<File
+				RelativePath="..\include\Achv\AchvBureau.h">
+			</File>
+			<File
+				RelativePath="..\include\Achv\AchvClerk.h">
+			</File>
+			<File
+				RelativePath="..\include\Achv\AchvConst.h">
+			</File>
+			<File
+				RelativePath="..\include\Achv\AchvData.h">
+			</File>
+			<File
+				RelativePath="..\include\Achv\AchvDatabank.h">
+			</File>
+			<File
+				RelativePath="..\include\Achv\AchvErrorCode.h">
+			</File>
+			<File
+				RelativePath="..\include\Achv\AchvEvent.h">
+			</File>
+			<File
+				RelativePath="..\include\Achv\AchvMetaData.h">
+			</File>
+			<File
+				RelativePath="..\include\Achv\AchvSeqMetaData.h">
+			</File>
+			<File
+				RelativePath="..\include\Achv\AchvTracer.h">
+			</File>
+		</Filter>
+		<Filter
+			Name="CharLobby"
+			Filter="">
+			<File
+				RelativePath=".\CharLobby.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyCommunity.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyContext.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyContextAchv.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyContextADL.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyContextADLCommunity.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyContextADLLB.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyContextADLMenu.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyManager.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyManagerADL.cpp">
+			</File>
+			<Filter
+				Name="Headers"
+				Filter="">
+				<File
+					RelativePath=".\CharLobby.h">
+				</File>
+				<File
+					RelativePath=".\CharLobbyContext.h">
+				</File>
+				<File
+					RelativePath=".\CharLobbyManager.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="LoadBalancing"
+			Filter="">
+			<File
+				RelativePath=".\Category.cpp">
+			</File>
+			<File
+				RelativePath=".\ChannelSvrTable.cpp">
+			</File>
+			<File
+				RelativePath=".\GameSvrTable.cpp">
+			</File>
+			<File
+				RelativePath=".\GChannel.cpp">
+			</File>
+			<Filter
+				Name="Headers"
+				Filter="">
+				<File
+					RelativePath=".\Category.h">
+				</File>
+				<File
+					RelativePath=".\ChannelSvrTable.h">
+				</File>
+				<File
+					RelativePath=".\GameSvrTable.h">
+				</File>
+				<File
+					RelativePath=".\GChannel.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Link&amp;User"
+			Filter="">
+			<File
+				RelativePath=".\CharLobbyManagerUserManager.cpp">
+			</File>
+			<File
+				RelativePath=".\CharLobbyUserManager.cpp">
+			</File>
+			<File
+				RelativePath=".\Link.cpp">
+			</File>
+			<File
+				RelativePath=".\User.cpp">
+			</File>
+			<File
+				RelativePath=".\UserLinkManager.cpp">
+			</File>
+			<File
+				RelativePath=".\UserManager.cpp">
+			</File>
+			<Filter
+				Name="Headers"
+				Filter="">
+				<File
+					RelativePath=".\CharLobbyManagerUserManager.h">
+				</File>
+				<File
+					RelativePath=".\CharLobbyUserManager.h">
+				</File>
+				<File
+					RelativePath=".\Link.h">
+				</File>
+				<File
+					RelativePath=".\UserLinkManager.h">
+				</File>
+				<File
+					RelativePath=".\UserManager.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="NLSManager"
+			Filter="">
+			<File
+				RelativePath="..\..\NFLibrary\NLSManager.cpp">
+			</File>
+			<File
+				RelativePath="..\..\NFLibrary\NLSManager.h">
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\ReadMe.txt">
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>
